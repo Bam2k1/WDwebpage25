@@ -1,0 +1,333 @@
+  /*=============================================
+  =               Shared Styling                =
+  =============================================*/
+
+
+
+  body{
+    background-color:rgb(148, 166, 181);
+  }
+
+  main {
+    clear: right; 
+    text-align: center;
+  }
+
+  h1{
+    padding: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    color: whitesmoke;
+    text-align: center;
+    text-shadow: 3px 3px 3px  rgb(48, 104, 126), -3px -3px 3px skyblue; /*Text stylization*/
+    font-size: 2em;
+  }
+
+  h2{
+    text-align: center;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+  }
+
+  h3 {
+    color:white;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+  }
+
+  footer {
+    text-align:center;
+    color:white;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+  }  
+
+  /* Navbar Styling ----------------------------------*/
+  a {
+    text-decoration: none;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+    text-transform: uppercase;
+    border-radius: 5px;
+    padding: 15px 20px;
+    transition: all 0.3s ease-in-out; /* Smooth transition for hover effect */
+  }
+
+  /* Hover and active states */
+  a:hover, .active { 
+    background-color: skyblue;
+    color: white;
+    box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.5);
+  }
+
+  /* Navigation styles */
+  nav ul {
+    display: flex;
+    justify-content: center; /* Center the items */
+    align-items: center;
+    list-style-type: none;
+    padding: 10px;
+    margin: 0;
+  }
+
+  /* Navigation list items */
+  nav ul li {
+    margin: 0 10px;
+  }
+
+  /* Navbar container */
+  nav {
+    position: sticky;
+    top: 0;
+    margin: 0 auto; 
+    padding: 15px 50px; /* Adjust padding (removes top and bottom space) */
+    box-shadow: 0px 2px 5px grey;
+    background-color: rgb(48, 104, 126);
+    border-radius: 8px; /* Keeps rounded corners */
+  }
+
+  /* Media query for screen widths below 700px */
+  @media (max-width: 700px) {
+    nav ul {
+      display: grid;
+      grid-template-columns: 1fr; /* Changes to a single-column grid */
+      text-align: center;
+      padding: 0;
+      gap: 10px;
+    }
+
+    nav ul li {
+      text-align: center;
+      margin: 10px 0;
+    }
+  }
+
+
+
+  /*=============================================
+  =            Styling for Home Page            =
+  =============================================*/
+
+
+
+  /* Grid layout for homeGrid */
+  .homeGrid {
+    display: grid;
+    grid-template-columns: 1fr 2fr; /* Two columns, left for an image and right for text*/
+    gap: 20px; 
+    align-items: center; 
+    padding: 20px;
+  }
+
+  /*Layout and Styles for content in the grid*/
+
+  .homeGrid img {
+    height: 72%;
+    width: 100%; 
+    border-radius: 10px; 
+    padding: 5px;
+    background: lightslategrey; 
+  }
+
+
+  .homeGrid p {
+    font-size: 1.1em;
+    line-height:1.4em;
+    margin:0;
+    color: white;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    text-align: left;
+  }
+
+  .homeGrid ul{
+    font-size: 1.1em;
+    line-height:1.4em;
+    color: white;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    text-align: left;
+  }
+
+  .homeGrid li{
+    text-align: left;
+  }
+
+  .nestedUL{
+    font-size: 0.8em;
+    line-height:1.2em;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+  }
+
+  .homeBorder {
+    border: 4px solid skyblue;
+    padding: 20px;
+    padding-top: 45px;
+    padding-bottom: 45px;
+    border-radius: 10px;
+    background: lightslategrey;
+  }
+
+
+  /*=============================================
+  =         Styling for Contact Page            =
+  =============================================*/
+
+
+  .contactGrid {
+    display: grid;
+    grid-template-columns: 1fr; /* One column to align content*/
+    gap: 20px;
+    align-items: center;
+    padding: 20px;
+  }
+
+  .contactGrid img {
+    height: 75%;
+    width: 50%;
+    border-radius: 50%; /* Rounded corners for visual consistency */
+    margin: 20px auto;
+    padding: 10px;
+    background: lightslategrey;
+  }
+
+  .contactGrid ul {
+    font-size: 1.2em;
+    line-height: 1.8;
+    color: white;
+    margin: 0 auto; /* Center the list horizontally */
+    padding: 0;
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center the items horizontally */
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+  }
+
+
+  .contactGrid li {
+    margin-bottom: 10px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+  }
+
+  .contactBorder {
+    border: 4px solid skyblue;
+    padding: 20px;
+    border-radius: 10px;
+    background: lightslategrey;
+  }
+
+  /* Responsive Design for Smaller Screens */
+  @media (max-width: 700px) {
+  .contactGrid {
+    grid-template-columns: 1fr; /* Stacks elements vertically */
+  }
+
+  .contactGrid ul {
+    text-align: center; /* Centers content for smaller screens */
+  }
+
+  .contactGrid img {
+    width: 100%; /* Adjusts image to fit screen size */
+  }
+  }
+
+
+
+  /*=============================================
+  =            Styling for about page           =
+  =============================================*/
+
+
+
+  .aboutGrid {
+    display:grid;
+    grid-template-rows: 150px 450px 120px; /* Three Rows, Top for banner, Middle for content, Bottom for closing*/
+    grid-template-columns: 1fr 1fr; /* Two columns, left for image and right for text*/
+    gap:10px;
+  }
+
+  /*Add which grid column for the header
+  and how long it will last */
+  .header { 
+    padding-top:30px;
+    color:  rgb(48, 104, 126);
+    text-transform:uppercase;
+    grid-column: 1 / -1;
+    text-align:center;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    border-radius: 15px; /* Adds rounded corners */
+  }
+
+  /*Add which grid column for the footer
+  and how long it will last */
+  .footer {
+    padding-top:20px;
+    text-align:center;
+    color: white;
+    text-transform:uppercase;
+    grid-column: 1/ -1;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    border-radius: 15px; /* Adds rounded corners */
+  }
+
+  div {
+    text-align: center;
+    font-size: 20px;
+    border-radius: 15px; /* Adds rounded corners */
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+  }
+
+  .ImageBlock img{
+    width:615px;
+    height:450px;
+    border-radius: 15px; /* Adds rounded corners */
+  }
+
+  .Article p{
+    color: white;
+    padding-top: 35px;
+    text-align:left;
+    margin:20px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    border-radius: 15px; /* Adds rounded corners */
+  }
+
+  /*background colors for each grid*/
+  .header { background-color: whitesmoke;}
+  .navbar { background-color: skyblue;}
+  .content { background-color: slategray;}
+  .footer { background-color: rgb(0, 66, 181);}
+  .ImageBlock { background-color: skyblue;}
+  .Article{ background-color: skyblue;}
+
+
+
+  /*=============================================
+  =        Styling for Projects Page            =
+  =============================================*/
+
+
+
+  .projects {
+    display:flex;
+    flex-wrap: wrap;
+    justify-content:center;
+  }
+
+  .projects p{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    border: 4px solid skyblue;
+    background: lightslategrey;
+    padding: 20px; /* Adds spacing inside the border */
+    border-radius: 10px; /* Rounded corners for consistency */
+    color: white;
+  }
+
+  .photo { /* styling for project block containing picture and paragraph */
+    max-width: 450px;
+    margin: 20px;
+  }
+
+  .photo img { /* Styling for only images in the project blocks*/
+    width: 440px;
+    height: 390px;
+    border-radius:10px;
+    padding: 5px;
+    background: lightslategrey;
+  }
